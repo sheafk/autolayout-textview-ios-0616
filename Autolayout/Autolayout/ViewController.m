@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *mainText;
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
-@property (nonatomic, strong) NSLayoutConstraint *textViewBottomContraint;
+@property (nonatomic, strong) NSLayoutConstraint *textViewBottomContraint; //Advanced Section
 
 @end
 
@@ -42,10 +42,10 @@
         [self.mainText.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:20].active=YES;
         [self.mainText.rightAnchor constraintEqualToAnchor:self.view.rightAnchor constant:-10].active=YES;
         [self.mainText.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:10].active=YES;
-    
+        //Advanced Section Code Below
         self.textViewBottomContraint = [self.mainText.bottomAnchor constraintEqualToAnchor:self.leftButton.topAnchor constant:-20];
     
-    //Advanced Section Code
+
     
     self.textViewBottomContraint.active = YES;
     
